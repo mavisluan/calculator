@@ -1,53 +1,37 @@
-body {
-  margin: 30px
-}
-
-
-.container {
-  border: 1px solid darkred;
+.grid-container {
+  margin: 30px;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
   width: 400px;
   height: 500px;
-  display: flex;
-  flex-direction: column
+  border: 1px solid darkred;
 }
 
-.display {
-  flex: 1;
-  background-color: rgb(44, 38, 38);
-  color: white;
-  font-size: 80px
-}
 
-.input {
+.grid-container > div {
   display: flex;
-  flex: 4;
+  align-items: center;
+  justify-content: center;
   font-size: 40px;
-  text-align: center;
+  border: 1px solid darkred;
 }
 
-.left {
-  flex: 3;
+.result {
+  grid-column: 1 / 5;
+  background-color: #403436;
+  color: white;
+  font-size: 50px;
   display: flex;
-  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
 
-.left div {
-  width: 98px;
-  height: 98px;
-  border: 1px solid darkred
+.clear {
+  grid-column: 1 / 4;
+  color: gray
 }
 
-.right {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
+.operator {
+  background-color: red;
+  color: white
 }
-
-.right div {
-  flex: 1;
-  width: 98px;
-  height: 98px;
-  border: 1px solid darkred
-}
-
-
