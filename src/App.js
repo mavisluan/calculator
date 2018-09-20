@@ -7,34 +7,30 @@ class App extends Component {
     input: [ ],
     oldNum: 0,
     newNum: 0,
-    operation: null
+    operator: null
   }
 
-  updateNumber = ( value ) => {
-    const input = [ ...this.state.input, value ]
+  updateNumber = ( number ) => {
+    const input = [ ...this.state.input, number ]
     this.setState({ 
       input,
       newNum: Number(input.join('')),
     })
   }
 
-  updateOperation = ( operation ) => {
-    if (this.state.input.indexOf(operation) > -1) {
-      return
-    } else {
-      this.setState(state => {
-        const oldNum = state.newNum
-        const input = []
-        return ({ input, oldNum, operation })
-      })
-    }
+  updateOperator = ( operator ) => {
+    this.setState(state => {
+      const oldNum = state.newNum
+      const input = []
+      return ({ input, oldNum, operator })
+    })  
   }
   
   clearInput = () => this.setState({ input: [], newNum: 0 })
   
   calculateResult = ( ) => {
-    const { operation, oldNum, newNum } = this.state
-    switch(operation) {
+    const { operator, oldNum, newNum } = this.state
+    switch(operator) {
       case '+':
         return this.setState({ newNum: oldNum + newNum })
       case '-':
@@ -60,7 +56,7 @@ class App extends Component {
         </div>
         <div 
           className='operator'
-          onClick={() => this.updateOperation('+')}
+          onClick={() => this.updateOperator('+')}
         >
           <i className="fas fa-plus"></i>
         </div>
@@ -69,7 +65,7 @@ class App extends Component {
         <div onClick={() => this.updateNumber('9')}>9</div>
         <div 
           className='operator'
-          onClick={() => this.updateOperation('-')}
+          onClick={() => this.updateOperator('-')}
         >
           <i className="fas fa-minus"></i>
         </div>
@@ -78,7 +74,7 @@ class App extends Component {
         <div onClick={() => this.updateNumber('6')}>6</div>
         <div 
           className='operator'
-          onClick={() => this.updateOperation('*')}
+          onClick={() => this.updateOperator('*')}
         >
           <i className="fas fa-times"></i>
         </div>
@@ -87,7 +83,7 @@ class App extends Component {
         <div onClick={() => this.updateNumber('3')}>3</div> 
         <div 
           className='operator'
-          onClick={() => this.updateOperation('/')}
+          onClick={() => this.updateOperator('/')}
         >
           <i className="fas fa-divide"></i>
         </div>
