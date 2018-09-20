@@ -3,8 +3,7 @@ This is a calculator web app, built with ReactJS.
 
 
 # App Screenshot
-
-<img src='https://github.com/mavisluan/calculator/blob/master/src/screenshot.png?raw=true' alt='calculator' width:'400' height:'500'>
+<img src="src/screenshot.png" width='400'>
 
 
 # Installation Instructions
