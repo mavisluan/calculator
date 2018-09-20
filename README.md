@@ -3,8 +3,8 @@ This is a calculator web app, built with ReactJS.
 
 
 # App Screenshot
-![screenshot](src/screenshot.png)
-<img src='screenshot.png' alt='calculator' width="400" height="500" >
+![screenshot](src/screenshot.png | width=400)
+
 
 
 # Installation Instructions
