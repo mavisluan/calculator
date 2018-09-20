@@ -3,7 +3,7 @@ This is a calculator web app, built with ReactJS.
 
 
 # App Scresrcenshot
-![](https://github.com/mavisluan/calculator/blob/master/src/screenshot.png =400x500)
+![](https://github.com/mavisluan/calculator/blob/master/src/screenshot.png)
 
 
 
