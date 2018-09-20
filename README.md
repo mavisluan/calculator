@@ -3,7 +3,7 @@ This is a calculator web app, built with ReactJS.
 
 
 # App Screenshot
-![500 * 400, 60%](src/screenshot.png) 
+![calculator|500x400, 60%](src/screenshot.png) 
 
 
 # Installation Instructions
